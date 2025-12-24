@@ -1,0 +1,18 @@
+<!--
+  UI Layer
+  --------
+  This template is ONLY responsible for visualization.
+  No flyweight logic lives here.
+-->
+<div class="container">
+  <div class="hall">
+    @for (seat of seats; track seats) {
+      <div
+        class="seat"
+        [class.reserved]="seat.context.isReserved">
+        <!-- seatNumber is extrinsic state -->
+        {{ seat.context.seatNumber }}
+      </div>
+    }
+  </div>
+</div>
